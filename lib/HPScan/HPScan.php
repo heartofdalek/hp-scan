@@ -4,7 +4,7 @@ namespace HPScan;
 class HPScan {
 
     protected $hpscan_bin = '/usr/bin/hp-scan';
-    protected $hpscan_args = [];
+    protected $hpscan_args = array();
     protected $scan_from_duplex = false;
     protected $default_dst = '.';
     protected $scan_dst = '.';
