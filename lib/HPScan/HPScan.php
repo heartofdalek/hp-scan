@@ -24,8 +24,9 @@ class HPScan {
         
         $lastline = exec($cmd, $output, $return_var);
         
-        if ($return_var>0) {
-            $message = implode($output);
+        $message = implode("\n", $output);
+        
+        if ($return_var>0 || preg_match('/error/i', $message)) {
             throw new \Exception($message, $return_var);
         }
         
